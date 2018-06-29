@@ -21,8 +21,182 @@
     min-width: 80% !important;
     width: 80% !important;
     max-width: 80% !important;
+    display: flex;
+    flex-direction: row;
     background: grey; }
-  .App .infos {
+    .App .header .header-total {
+      margin: 0 !important;
+      padding: 0 !important;
+      min-height: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      min-width: 30% !important;
+      width: 30% !important;
+      max-width: 30% !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .App .header .header-total .header-total-p-plus {
+        margin: 0;
+        padding: 2%;
+        font-size: xx-large;
+        color: green; }
+      .App .header .header-total .header-total-p-minus {
+        margin: 0;
+        padding: 2%;
+        font-size: xx-large;
+        color: red; }
+      .App .header .header-total .header-total-p-total {
+        margin: 0;
+        padding: 2%;
+        font-size: xx-large;
+        color: white; }
+    .App .header .header-categories {
+      margin: 0 !important;
+      padding: 0 !important;
+      min-height: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      min-width: 40% !important;
+      width: 40% !important;
+      max-width: 40% !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; }
+      .App .header .header-categories .header-categories-row {
+        margin: 0 !important;
+        padding: 0 !important;
+        min-height: 20% !important;
+        height: 20% !important;
+        max-height: 20% !important;
+        min-width: 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: lightgray; }
+        .App .header .header-categories .header-categories-row .header-categories-row-title {
+          margin: 0 !important;
+          margin-left: 3% !important;
+          padding: 0 !important;
+          min-height: 100% !important;
+          height: 100% !important;
+          max-height: 100% !important;
+          min-width: 77% !important;
+          width: 77% !important;
+          max-width: 77% !important;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start; }
+        .App .header .header-categories .header-categories-row .header-categories-row-options {
+          margin: 0 !important;
+          padding: 0 !important;
+          min-height: 100% !important;
+          height: 100% !important;
+          max-height: 100% !important;
+          min-width: 20% !important;
+          width: 20% !important;
+          max-width: 20% !important;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center; }
+        .App .header .header-categories .header-categories-row .header-categories-row-options-icon {
+          margin: 0 !important;
+          padding: 0 !important;
+          min-height: 100% !important;
+          height: 100% !important;
+          max-height: 100% !important;
+          min-width: 50% !important;
+          width: 50% !important;
+          max-width: 50% !important;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+    .App .header .header-overview {
+      margin: 0 !important;
+      padding: 0 !important;
+      min-height: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      min-width: 30% !important;
+      width: 30% !important;
+      max-width: 30% !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow-y: scroll; }
+      .App .header .header-overview .header-overview-row {
+        margin: 0 !important;
+        padding: 0 !important;
+        min-height: 10% !important;
+        height: 10% !important;
+        max-height: 10% !important;
+        min-width: 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: 0.1px solid grey;
+        background: lightgray; }
+        .App .header .header-overview .header-overview-row .header-overview-row-title {
+          margin: 0 !important;
+          margin-left: 2% !important;
+          padding: 0 !important;
+          min-height: 100% !important;
+          height: 100% !important;
+          max-height: 100% !important;
+          min-width: 48% !important;
+          width: 48% !important;
+          max-width: 48% !important;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start; }
+        .App .header .header-overview .header-overview-row .header-overview-row-sum {
+          margin: 0 !important;
+          padding: 0 !important;
+          min-height: 100% !important;
+          height: 100% !important;
+          max-height: 100% !important;
+          min-width: 30% !important;
+          width: 30% !important;
+          max-width: 30% !important;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+        .App .header .header-overview .header-overview-row .header-overview-row-options {
+          margin: 0 !important;
+          padding: 0 !important;
+          min-height: 100% !important;
+          height: 100% !important;
+          max-height: 100% !important;
+          min-width: 20% !important;
+          width: 20% !important;
+          max-width: 20% !important;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .App .header .header-overview .header-overview-row .header-overview-row-options .header-overview-row-options-icon {
+            margin: 0 !important;
+            padding: 0 !important;
+            min-height: 100% !important;
+            height: 100% !important;
+            max-height: 100% !important;
+            min-width: 50% !important;
+            width: 50% !important;
+            max-width: 50% !important;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+  .App .table {
     margin: 0;
     margin-top: 0.5% !important;
     padding: 0;
@@ -32,4 +206,95 @@
     min-width: 80% !important;
     width: 80% !important;
     max-width: 80% !important;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
     background: lightgray; }
+    .App .table .table-header {
+      margin: 0 !important;
+      padding: 0 !important;
+      min-height: 10% !important;
+      height: 10% !important;
+      max-height: 10% !important;
+      min-width: 100% !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start; }
+      .App .table .table-header .table-header-col {
+        margin: 0 !important;
+        padding: 0 !important;
+        min-height: 100% !important;
+        height: 100% !important;
+        max-height: 100% !important;
+        min-width: 12.5% !important;
+        width: 12.5% !important;
+        max-width: 12.5% !important;
+        border-right: 0.1px solid grey;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+    .App .table .table-row {
+      margin: 0 !important;
+      padding: 0 !important;
+      min-height: 10% !important;
+      height: 10% !important;
+      max-height: 10% !important;
+      min-width: 100% !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      border-top: 0.1px solid grey; }
+      .App .table .table-row .table-row-col {
+        margin: 0 !important;
+        padding: 0 !important;
+        min-height: 100% !important;
+        height: 100% !important;
+        max-height: 100% !important;
+        min-width: 12.5% !important;
+        width: 12.5% !important;
+        max-width: 12.5% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+    .App .table .stripped {
+      background-color: grey; }
+  .App .btn-table {
+    min-height: 9.5% !important;
+    height: 9.5% !important;
+    max-height: 9.5% !important;
+    min-width: 5% !important;
+    width: 5% !important;
+    max-width: 5% !important;
+    background: lightgray;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .App .btn-table-plus {
+    top: 81.7%;
+    left: 2.5%; }
+  .App .btn-table-minus {
+    top: 81.7%;
+    right: 2.5%; }
+  .App .btn-overview {
+    min-height: 4.75% !important;
+    height: 4.75% !important;
+    max-height: 4.75% !important;
+    min-width: 2.5% !important;
+    width: 2.5% !important;
+    max-width: 2.5% !important;
+    background: lightgray;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .App .btn-overview-plus {
+    top: 35.5%;
+    right: 5%; }
