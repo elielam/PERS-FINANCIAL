@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {MdEdit, MdDelete} from "react-icons/lib/md/index";
+import {MdSettings} from "react-icons/lib/md/index";
 // import './categories.css';
 
 export default class Categories extends Component {
@@ -27,8 +27,7 @@ export default class Categories extends Component {
                                 {this.generateCategoryCount(category.id)}
                             </div>
                             <div className="header-categories-row-options">
-                                <div className="header-categories-row-options-icon"><MdEdit/></div>
-                                <div className="header-categories-row-options-icon"><MdDelete/></div>
+                                <div className="header-categories-row-options-icon"><MdSettings/></div>
                             </div>
                         </div>
                     )

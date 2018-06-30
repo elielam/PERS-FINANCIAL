@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {MdAdd, MdEdit, MdDelete, MdSettings} from "react-icons/lib/md/index";
+import {MdAdd, MdDelete, MdSettings} from "react-icons/lib/md/index";
 // import './table.css';
 
 export default class Table extends Component {
@@ -32,8 +32,7 @@ export default class Table extends Component {
                                     <div className="table-corp-row-col">{operation.category}</div>
                                     <div className="table-corp-row-col">{operation.sum}</div>
                                     <div className="table-corp-row-col">
-                                        <div className="table-corp-row-col-options"><MdEdit/></div>
-                                        <div className="table-corp-row-col-options"><MdDelete/></div>
+                                        <div className="table-corp-row-col-options"><MdDelete onClick={() => this.props.handleDeleteBtn(operation.id)}/></div>
                                         <div className="table-corp-row-col-options"><MdSettings/></div>
                                     </div>
                                 </div>
@@ -46,8 +45,7 @@ export default class Table extends Component {
                                     <div className="table-corp-row-col">{operation.category}</div>
                                     <div className="table-corp-row-col">{operation.sum}</div>
                                     <div className="table-corp-row-col">
-                                        <div className="table-corp-row-col-options"><MdEdit/></div>
-                                        <div className="table-corp-row-col-options"><MdDelete/></div>
+                                        <div className="table-corp-row-col-options"><MdDelete onClick={() => this.props.handleDeleteBtn(operation.id)}/></div>
                                         <div className="table-corp-row-col-options"><MdSettings/></div>
                                     </div>
                                 </div>

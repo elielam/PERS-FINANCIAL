@@ -10,7 +10,7 @@ export default class Header extends Component {
             <div className="header">
 
                 <Total
-                    operations={this.props.operations}
+                    values={this.props.values}
                 />
 
                 <Categories
