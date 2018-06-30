@@ -33,7 +33,7 @@ export default class Table extends Component {
                                     <div className="table-corp-row-col">{operation.sum}</div>
                                     <div className="table-corp-row-col">
                                         <div className="table-corp-row-col-options"><MdDelete onClick={() => this.props.handleDeleteBtn(operation.id)}/></div>
-                                        <div className="table-corp-row-col-options"><MdSettings/></div>
+                                        <div className="table-corp-row-col-options"><MdSettings onClick={() => this.props.handleSettingsBtn('operation', operation.id)}/></div>
                                     </div>
                                 </div>
                             ) : (
@@ -46,7 +46,7 @@ export default class Table extends Component {
                                     <div className="table-corp-row-col">{operation.sum}</div>
                                     <div className="table-corp-row-col">
                                         <div className="table-corp-row-col-options"><MdDelete onClick={() => this.props.handleDeleteBtn(operation.id)}/></div>
-                                        <div className="table-corp-row-col-options"><MdSettings/></div>
+                                        <div className="table-corp-row-col-options"><MdSettings onClick={() => this.props.handleSettingsBtn('operation', operation.id)}/></div>
                                     </div>
                                 </div>
                             )

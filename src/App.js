@@ -6,6 +6,7 @@ import Table from "./components/table";
 
 import {SAMPLE_OPERATIONS} from "./fixtures/operations_fixtures";
 import {SAMPLE_CATEGORIES} from "./fixtures/categories_fixtures";
+import ModalSettings from "./components/modalSettings";
 
 class App extends Component {
     state={
@@ -15,6 +16,11 @@ class App extends Component {
             credit: 0,
             debit: 0,
             total: 0,
+        },
+        settings: {
+            show: false,
+            type: "",
+            entity: []
         }
     };
 
@@ -45,17 +51,41 @@ class App extends Component {
         this.updateValues();
     }
 
-    handleSettingsBtn(id) {
-        let operations = this.state.operations;
-        operations.forEach((operation, index) => {
-            if(operation.id === id) {
-                operations.splice(index, 1);
+    handleSettingsBtn(type, id) {
+        let settings = this.state.settings;
+        settings.show = true;
+        settings.type = type;
+        switch (type) {
+            case 'operation':
+                this.state.operations.forEach((operation) => {
+                    if (operation.id === id) {
+                        settings.entity.push(operation);
+                    }
+                });
+                break;
+            case 'category':
+                this.state.categories.forEach((category) => {
+                    if (category.id === id) {
+                        settings.entity.push(category);
+                    }
+                });
+                break;
+            default:
+                break;
+        }
+        this.setState({
+            settings: settings
+        });
+    }
+
+    handleCloseSettings(){
+        this.setState({
+            settings: {
+                show: false,
+                type: "",
+                entity: []
             }
         });
-        this.setState({
-            operations: operations
-        });
-        this.updateValues();
     }
 
     updateValues() {
@@ -94,12 +124,22 @@ class App extends Component {
                     operations={this.state.operations}
                     values={this.state.values}
                     handleCategoryChange={this.handleCategoryChange.bind(this)}
+                    handleSettingsBtn={this.handleSettingsBtn.bind(this)}
                 />
 
                 <Table
                     operations={this.state.operations}
                     handleDeleteBtn={this.handleDeleteBtn.bind(this)}
+                    handleSettingsBtn={this.handleSettingsBtn.bind(this)}
                 />
+
+                { this.state.settings.show && (
+                    <ModalSettings
+                        type={this.state.settings.type}
+                        entity={this.state.settings.entity}
+                        handleCloseSettings={this.handleCloseSettings.bind(this)}
+                    />
+                )}
 
             </div>
 

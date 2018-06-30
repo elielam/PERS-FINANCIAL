@@ -17,6 +17,7 @@ export default class Header extends Component {
                     operations={this.props.operations}
                     categories={this.props.categories}
                     handleCategoryChange={this.props.handleCategoryChange}
+                    handleSettingsBtn={this.props.handleSettingsBtn}
                 />
 
                 <Overview
