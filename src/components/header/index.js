@@ -14,6 +14,7 @@ export default class Header extends Component {
                 />
 
                 <Categories
+                    operations={this.props.operations}
                     categories={this.props.categories}
                     handleCategoryChange={this.props.handleCategoryChange}
                 />

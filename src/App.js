@@ -13,13 +13,6 @@ class App extends Component {
         operations: SAMPLE_OPERATIONS
     };
 
-    // componentWillMount() {
-    //     this.setState({
-    //         categories: SAMPLE_CATEGORIES,
-    //         operations: SAMPLE_OPERATIONS
-    //     })
-    // }
-
     handleCategoryChange(id) {
         let categories = this.state.categories;
         categories.forEach((category) => {
@@ -45,10 +38,6 @@ class App extends Component {
                 <Table
                     operations={this.state.operations}
                 />
-
-                <div className="btn-overview btn-overview-plus">+</div>
-                <div className="btn-table btn-table-plus">+</div>
-                <div className="btn-table btn-table-minus">-</div>
 
             </div>
 

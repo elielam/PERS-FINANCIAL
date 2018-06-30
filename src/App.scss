@@ -116,16 +116,17 @@
           height: 100% !important;
           max-height: 100% !important;
 
-          min-width: 77% !important;
-          width: 77% !important;
-          max-width: 77% !important;
+          min-width: 67% !important;
+          width: 67% !important;
+          max-width: 67% !important;
 
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: flex-start;
         }
-        .header-categories-row-options {
+
+        .header-categories-row-count {
           margin: 0 !important;
           padding: 0 !important;
 
@@ -136,6 +137,23 @@
           min-width: 20% !important;
           width: 20% !important;
           max-width: 20% !important;
+
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+        .header-categories-row-options {
+          margin: 0 !important;
+          padding: 0 !important;
+
+          min-height: 100% !important;
+          height: 100% !important;
+          max-height: 100% !important;
+
+          min-width: 10% !important;
+          width: 10% !important;
+          max-width: 10% !important;
 
           display: flex;
           flex-direction: row;
@@ -172,10 +190,10 @@
       width: 30% !important;
       max-width: 30% !important;
 
+      position: relative;
+
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
 
       overflow-y: scroll;
 
@@ -284,7 +302,7 @@
     display: flex;
     flex-direction: column;
 
-    overflow-x: hidden;
+    position: relative;
 
     background: lightgray;
 
@@ -313,9 +331,9 @@
         height: 100% !important;
         max-height: 100% !important;
 
-        min-width: 12.5% !important;
-        width: 12.5% !important;
-        max-width: 12.5% !important;
+        min-width: 14.28571428571429% !important;
+        width: 14.28571428571429% !important;
+        max-width: 14.28571428571429% !important;
 
         border-right: 0.1px solid grey;
 
@@ -325,94 +343,100 @@
       }
     }
 
-    .table-row {
+    .table-corp {
       margin: 0 !important;
       padding: 0 !important;
 
-      min-height: 10% !important;
-      height: 10% !important;
-      max-height: 10% !important;
+      min-height: 90% !important;
+      height: 90% !important;
+      max-height: 90% !important;
 
       min-width: 100% !important;
       width: 100% !important;
       max-width: 100% !important;
 
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: center;
+      flex-direction: column;
 
-      border-top: 0.1px solid grey;
+      overflow-y: scroll;
 
-
-      .table-row-col {
+      .table-corp-row {
         margin: 0 !important;
         padding: 0 !important;
 
-        min-height: 100% !important;
-        height: 100% !important;
-        max-height: 100% !important;
+        min-height: 10% !important;
+        height: 10% !important;
+        max-height: 10% !important;
 
-        min-width: 12.5% !important;
-        width: 12.5% !important;
-        max-width: 12.5% !important;
+        min-width: 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
 
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
         justify-content: center;
+
+        border-top: 0.1px solid grey;
+
+
+        .table-corp-row-col {
+          margin: 0 !important;
+          padding: 0 !important;
+
+          min-height: 100% !important;
+          height: 100% !important;
+          max-height: 100% !important;
+
+          min-width: 14.28571428571429% !important;
+          width: 14.28571428571429% !important;
+          max-width: 14.28571428571429% !important;
+
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+
+          .table-corp-row-col-options {
+            margin: 0 !important;
+            padding: 0 !important;
+
+            min-height: 100% !important;
+            height: 100% !important;
+            max-height: 100% !important;
+
+            min-width: 20% !important;
+            width: 20% !important;
+            max-width: 20% !important;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      .stripped {
+        background-color: grey;
       }
     }
-    .stripped {
-      background-color: grey;
+
+    .btn-table {
+      min-height: 10% !important;
+      height: 10% !important;
+      max-height: 10% !important;
+
+      min-width: 5% !important;
+      width: 5% !important;
+      max-width: 5% !important;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+
+      bottom: 10%;
+      left: -5%;
     }
-  }
-
-  .btn-table {
-    min-height: 9.5% !important;
-    height: 9.5% !important;
-    max-height: 9.5% !important;
-
-    min-width: 5% !important;
-    width: 5% !important;
-    max-width: 5% !important;
-
-    background: lightgray;
-
-    position: absolute;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .btn-table-plus {
-    top: 81.7%;
-    left: 2.5%;
-  }
-  .btn-table-minus {
-    top: 81.7%;
-    right: 2.5%;
-  }
-
-  .btn-overview {
-    min-height: 4.75% !important;
-    height: 4.75% !important;
-    max-height: 4.75% !important;
-
-    min-width: 2.5% !important;
-    width: 2.5% !important;
-    max-width: 2.5% !important;
-
-    background: lightgray;
-
-    position: absolute;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .btn-overview-plus {
-    top: 35.5%;
-    right: 5%;
   }
 }
