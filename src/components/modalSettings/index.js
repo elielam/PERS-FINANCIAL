@@ -11,6 +11,9 @@ export default class ModalSettings extends Component {
                         color={"white"}
                     />
                 </div>
+                <div className="modal-settings-content">
+
+                </div>
             </div>
         )
     }

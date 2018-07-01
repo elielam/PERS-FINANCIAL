@@ -325,6 +325,9 @@
     min-width: 100vw !important;
     width: 100vw !important;
     max-width: 100vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8); }
     .App .modal-settings .modal-settings-close-btn {
@@ -343,3 +346,13 @@
       position: absolute;
       top: 0;
       right: 0; }
+    .App .modal-settings .modal-settings-content {
+      margin: 0;
+      padding: 0;
+      min-height: 50% !important;
+      height: 50% !important;
+      max-height: 50% !important;
+      min-width: 50% !important;
+      width: 50% !important;
+      max-width: 50% !important;
+      background: white; }
