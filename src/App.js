@@ -7,6 +7,7 @@ import Table from "./components/table";
 import {SAMPLE_OPERATIONS} from "./fixtures/operations_fixtures";
 import {SAMPLE_CATEGORIES} from "./fixtures/categories_fixtures";
 import ModalSettings from "./components/modalSettings";
+import ModalAdd from "./components/modalAdd";
 
 class App extends Component {
     state={
@@ -21,6 +22,9 @@ class App extends Component {
             show: false,
             type: "",
             entity: []
+        },
+        add: {
+            show: false
         }
     };
 
@@ -78,6 +82,39 @@ class App extends Component {
         });
     }
 
+    handleSaveSettings(type, entity) {
+        switch (type) {
+            case "category":
+                let categories = this.state.categories;
+                categories.forEach((category, index) => {
+                    if(category.id === entity.id) {
+                        categories.splice(index, 1);
+                        categories.splice(index, 0, entity);
+                    }
+                });
+                this.setState({
+                    categories: categories
+                });
+                break;
+            case "operation":
+                let operations = this.state.operations;
+                operations.forEach((operation, index) => {
+                    if(operation.id === entity.id) {
+                        operations.splice(index, 1);
+                        operations.splice(index, 0, entity);
+                    }
+                });
+                this.setState({
+                    operations: operations
+                });
+                break;
+            default:
+                break;
+        }
+        this.updateValues();
+        this.handleCloseSettings();
+    }
+
     handleCloseSettings(){
         this.setState({
             settings: {
@@ -85,6 +122,45 @@ class App extends Component {
                 type: "",
                 entity: []
             }
+        });
+    }
+
+    handleAddBtn() {
+        let add = this.state.add;
+        add.show = true;
+        this.setState({
+            add: add
+        });
+    }
+
+    handleSaveAdd(type, entity) {
+        switch (type) {
+            case "category":
+                let categories = this.state.categories;
+                categories.push(entity);
+                this.setState({
+                    categories: categories
+                });
+                break;
+            case "operation":
+                let operations = this.state.operations;
+                operations.push(entity);
+                this.setState({
+                    operations: operations
+                });
+                break;
+            default:
+                break;
+        }
+        this.updateValues();
+        this.handleCloseAdd();
+    }
+
+    handleCloseAdd() {
+        let add = this.state.add;
+        add.show = false;
+        this.setState({
+            add: add
         });
     }
 
@@ -128,16 +204,26 @@ class App extends Component {
                 />
 
                 <Table
+                    categories={this.state.categories}
                     operations={this.state.operations}
                     handleDeleteBtn={this.handleDeleteBtn.bind(this)}
                     handleSettingsBtn={this.handleSettingsBtn.bind(this)}
+                    handleAddBtn={this.handleAddBtn.bind(this)}
                 />
 
                 { this.state.settings.show && (
                     <ModalSettings
-                        type={this.state.settings.type}
-                        entity={this.state.settings.entity}
+                        settings={this.state.settings}
+                        handleSaveSettings={this.handleSaveSettings.bind(this)}
                         handleCloseSettings={this.handleCloseSettings.bind(this)}
+                    />
+                )}
+
+                { this.state.add.show && (
+                    <ModalAdd
+                        entities={this.state}
+                        handleSaveAdd={this.handleSaveAdd.bind(this)}
+                        handleCloseAdd={this.handleCloseAdd.bind(this)}
                     />
                 )}
 

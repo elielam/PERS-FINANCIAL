@@ -6,7 +6,7 @@ export default class Categories extends Component {
     generateCategoryCount(id) {
         let count = 0;
         this.props.operations.forEach((operation) => {
-            if(operation.category === id) {
+            if(operation.category === parseInt(id, 10)) {
                 count++;
             }
         });
@@ -14,7 +14,6 @@ export default class Categories extends Component {
     }
 
     render() {
-
         return (
             <div className="header-categories">
                 {this.props.categories.map(
