@@ -153,14 +153,18 @@ class App extends Component {
             case "category":
                 let categories = this.state.categories;
                 categories.push(entity);
+                console.log(entity);
+
                 axios.post("http://localhost:8000/category/", {
-                    libelle: entity.libelle
+                    request: {
+                        libelle: 'Category 8'
+                    }
                 })
-                    .then(() => {
-                        this.setState({
-                            categories: categories
-                        });
-                    }).catch(function(error) {
+                .then(() => {
+                    this.setState({
+                        categories: categories
+                    });
+                }).catch(function(error) {
                     console.log(error);
                 });
                 console.log(this.state);
