@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 
 import Header from "./components/header";
 import Table from "./components/table";
 
-import {SAMPLE_OPERATIONS} from "./fixtures/operations_fixtures";
-import {SAMPLE_CATEGORIES} from "./fixtures/categories_fixtures";
 import ModalSettings from "./components/modalSettings";
 import ModalAdd from "./components/modalAdd";
 
 class App extends Component {
     state={
-        categories: SAMPLE_CATEGORIES,
-        operations: SAMPLE_OPERATIONS,
+        categories: [],
+        operations: [],
         values: {
             credit: 0,
             debit: 0,
@@ -29,6 +28,22 @@ class App extends Component {
     };
 
     componentWillMount() {
+        axios.get("http://localhost:8000/categories/")
+            .then((response) => {
+                this.setState({
+                    categories: response.data.datas
+                })
+            }).catch(function(error) {
+            console.log(error);
+        });
+        axios.get("http://localhost:8000/operations/")
+            .then((response) => {
+                this.setState({
+                    operations: response.data.datas
+                })
+            }).catch(function(error) {
+            console.log(error);
+        });
         this.updateValues();
     }
 
@@ -138,9 +153,17 @@ class App extends Component {
             case "category":
                 let categories = this.state.categories;
                 categories.push(entity);
-                this.setState({
-                    categories: categories
+                axios.post("http://localhost:8000/category/", {
+                    libelle: entity.libelle
+                })
+                    .then(() => {
+                        this.setState({
+                            categories: categories
+                        });
+                    }).catch(function(error) {
+                    console.log(error);
                 });
+                console.log(this.state);
                 break;
             case "operation":
                 let operations = this.state.operations;
@@ -187,6 +210,10 @@ class App extends Component {
                 total: total.toFixed(2),
             }
         });
+    }
+
+    persistValues() {
+
     }
 
     render() {
