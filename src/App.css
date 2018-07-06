@@ -65,7 +65,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      overflow-y: scroll; }
+      overflow-y: scroll;
+      border-left: 1px solid lightgray; }
       .App .header .header-categories .header-categories-row {
         margin: 0 !important;
         padding: 0 !important;
@@ -300,9 +301,9 @@
             align-items: center;
             justify-content: center; }
         .App .table .table-corp .table-corp-row .debit {
-          background-color: red !important; }
+          background-color: transparent !important; }
         .App .table .table-corp .table-corp-row .credit {
-          background-color: green !important; }
+          background-color: transparent !important; }
       .App .table .table-corp .stripped {
         background-color: grey; }
     .App .table .btn-table {

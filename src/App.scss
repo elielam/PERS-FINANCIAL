@@ -90,6 +90,8 @@
 
       overflow-y: scroll;
 
+      border-left: 1px solid lightgray;
+
       .header-categories-row {
         margin: 0 !important;
         padding: 0 !important;
@@ -415,10 +417,12 @@
           }
         }
         .debit {
-          background-color: red !important;
+          //background-color: red !important;
+          background-color: transparent !important;
         }
         .credit {
-          background-color: green !important;
+          //background-color: green !important;
+          background-color: transparent !important;
         }
       }
       .stripped {
