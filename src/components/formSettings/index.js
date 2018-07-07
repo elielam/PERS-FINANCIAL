@@ -44,7 +44,7 @@ export default class FormSettings extends Component {
                 <div className="form-btns">
                     <button onClick={() => this.props.handleSaveSettings(this.props.settings.type ,this.state.entity)}>Apply</button>
                     {this.props.settings.type === "category" && (
-                        <button onClick={() => this.props.handleDeleteSettings(this.state.entity.id)}>Delete</button>
+                        <button onClick={() => this.props.handleSettingsDeleteBtn(this.state.entity.id)}>Delete</button>
                     )}
                     <button onClick={this.props.handleCloseSettings}>Cancel</button>
                 </div>

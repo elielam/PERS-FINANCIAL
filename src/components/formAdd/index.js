@@ -8,21 +8,6 @@ export default class FormAdd extends Component {
     };
 
     componentWillMount() {
-        if(this.props.type === "operation") {
-            let entity = this.state.entity;
-            entity.id = countAllOperations(this.props.entities.operations) + 1;
-            this.setState({
-                entity: entity
-            });
-        }
-        if(this.props.type === "category") {
-            let entity = this.state.entity;
-            entity.id = countAllCategories(this.props.entities.categories) + 1;
-            entity.selected = false;
-            this.setState({
-                entity: entity
-            });
-        }
     }
 
     handleChange(e) {
@@ -50,10 +35,15 @@ export default class FormAdd extends Component {
                     )}
                     {this.props.type === "operation" && (
                         <div>
+                            <label>Libelle</label>
                             <input type="text" name="libelle" value={this.state.entity.libelle} onChange={(e) => this.handleChange(e)}/>
+                            <label>Date</label>
                             <input type="text" name="date" value={this.state.entity.date} onChange={(e) => this.handleChange(e)}/>
+                            <label>Type</label>
                             <input type="text" name="type" value={this.state.entity.type} onChange={(e) => this.handleChange(e)}/>
+                            <label>Category</label>
                             <input type="text" name="category" value={this.state.entity.category} onChange={(e) => this.handleChange(e)}/>
+                            <label>Sum</label>
                             <input type="text" name="sum" value={this.state.entity.sum} onChange={(e) => this.handleChange(e)}/>
                         </div>
                     )}

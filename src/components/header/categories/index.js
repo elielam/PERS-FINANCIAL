@@ -18,7 +18,7 @@ export default class Categories extends Component {
             <div className="header-categories">
                 {this.props.categories.map(
                     (category, index) => (
-                        index < 3 ? (
+                        index < 2 ? (
                             <div key={category.id} className="header-categories-row" style={{background:"grey"}}>
                                 <div className="header-categories-row-title" onClick={() => this.props.handleCategoryChange(category.id)}>
                                     <p>{category.libelle}</p>

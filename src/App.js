@@ -28,6 +28,11 @@ class App extends Component {
     };
 
     componentWillMount() {
+        this.getCategories();
+        this.getOperations();
+    }
+
+    getCategories() {
         axios.get("http://localhost:8000/categories/")
             .then((response) => {
                 this.setState({
@@ -36,15 +41,18 @@ class App extends Component {
             }).catch(function(error) {
             console.log(error);
         });
+    }
+
+    getOperations() {
         axios.get("http://localhost:8000/operations/")
             .then((response) => {
                 this.setState({
                     operations: response.data.datas
-                })
+                });
+                this.updateValues();
             }).catch(function(error) {
             console.log(error);
         });
-        this.updateValues();
     }
 
     handleCategoryChange(id) {
@@ -59,15 +67,16 @@ class App extends Component {
 
     handleDeleteBtn(id) {
         let operations = this.state.operations;
-        operations.forEach((operation, index) => {
+        operations.forEach((operation) => {
             if(operation.id === id) {
-                operations.splice(index, 1);
+                axios.delete("http://localhost:8000/operation/", {params: {id: id}})
+                .then(() => {
+                    this.getOperations();
+                }).catch(function(error) {
+                    console.log(error);
+                });
             }
         });
-        this.setState({
-            operations: operations
-        });
-        this.updateValues();
     }
 
     handleSettingsBtn(type, id) {
@@ -97,36 +106,52 @@ class App extends Component {
         });
     }
 
+    handleSettingsDeleteBtn(id) {
+        let categories = this.state.categories;
+        categories.forEach((category) => {
+            if(category.id === id) {
+                axios.delete("http://localhost:8000/category/", {params: {id: id}})
+                    .then(() => {
+                        this.getCategories();
+                    }).catch(function(error) {
+                    console.log(error);
+                });
+            }
+        });
+        this.handleCloseSettings();
+    }
+
     handleSaveSettings(type, entity) {
         switch (type) {
             case "category":
                 let categories = this.state.categories;
-                categories.forEach((category, index) => {
+                categories.forEach((category) => {
                     if(category.id === entity.id) {
-                        categories.splice(index, 1);
-                        categories.splice(index, 0, entity);
+                        axios.put("http://localhost:8000/category/", `id=${entity.id}&libelle=${entity.libelle}`)
+                            .then(() => {
+                                this.getCategories();
+                            }).catch(function(error) {
+                            console.log(error);
+                        });
                     }
-                });
-                this.setState({
-                    categories: categories
                 });
                 break;
             case "operation":
                 let operations = this.state.operations;
-                operations.forEach((operation, index) => {
+                operations.forEach((operation) => {
                     if(operation.id === entity.id) {
-                        operations.splice(index, 1);
-                        operations.splice(index, 0, entity);
+                        axios.put("http://localhost:8000/operation/", `id=${entity.id}&libelle=${entity.libelle}&type=${entity.type}&date=${entity.date}&category=${entity.category}&sum=${entity.sum}`)
+                            .then(() => {
+                                this.getOperations();
+                            }).catch(function(error) {
+                            console.log(error);
+                        });
                     }
-                });
-                this.setState({
-                    operations: operations
                 });
                 break;
             default:
                 break;
         }
-        this.updateValues();
         this.handleCloseSettings();
     }
 
@@ -151,35 +176,24 @@ class App extends Component {
     handleSaveAdd(type, entity) {
         switch (type) {
             case "category":
-                let categories = this.state.categories;
-                categories.push(entity);
-                console.log(entity);
-
-                axios.post("http://localhost:8000/category/", {
-                    request: {
-                        libelle: 'Category 8'
-                    }
-                })
+                axios.post("http://localhost:8000/category/", `libelle=${entity.libelle}`)
                 .then(() => {
-                    this.setState({
-                        categories: categories
-                    });
+                    this.getCategories();
                 }).catch(function(error) {
                     console.log(error);
                 });
-                console.log(this.state);
                 break;
             case "operation":
-                let operations = this.state.operations;
-                operations.push(entity);
-                this.setState({
-                    operations: operations
+                axios.post("http://localhost:8000/operation/", `libelle=${entity.libelle}&type=${entity.type}&date=${entity.date}&category=${entity.category}&sum=${entity.sum}`)
+                    .then(() => {
+                        this.getOperations();
+                    }).catch(function(error) {
+                    console.log(error);
                 });
                 break;
             default:
                 break;
         }
-        this.updateValues();
         this.handleCloseAdd();
     }
 
@@ -216,12 +230,7 @@ class App extends Component {
         });
     }
 
-    persistValues() {
-
-    }
-
     render() {
-
         return (
 
             <div className="App">
@@ -247,6 +256,7 @@ class App extends Component {
                         settings={this.state.settings}
                         handleSaveSettings={this.handleSaveSettings.bind(this)}
                         handleCloseSettings={this.handleCloseSettings.bind(this)}
+                        handleSettingsDeleteBtn={this.handleSettingsDeleteBtn.bind(this)}
                     />
                 )}
 

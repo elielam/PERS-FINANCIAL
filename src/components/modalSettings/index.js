@@ -11,7 +11,7 @@ export default class ModalSettings extends Component {
                         settings={this.props.settings}
                         handleSaveSettings={this.props.handleSaveSettings}
                         handleCloseSettings={this.props.handleCloseSettings}
-                        handleDeleteSettings={this.props.handleDeleteSettings}
+                        handleSettingsDeleteBtn={this.props.handleSettingsDeleteBtn}
                     />
                 </div>
             </div>
