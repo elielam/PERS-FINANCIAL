@@ -372,6 +372,8 @@
           flex-direction: column;
           justify-content: center;
           align-items: center; }
+          .App .modal-settings .modal-settings-content .form .form-title h4 {
+            text-transform: uppercase; }
         .App .modal-settings .modal-settings-content .form .form-inputs {
           margin: 0;
           padding: 0;
@@ -385,17 +387,37 @@
           flex-direction: column;
           justify-content: center;
           align-items: center; }
+          .App .modal-settings .modal-settings-content .form .form-inputs input {
+            margin-top: 5%;
+            width: 100% !important;
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 8% !important;
+            height: 8% !important;
+            max-height: 8% !important;
+            border: none !important;
+            border-bottom: 1px solid lightgray !important; }
           .App .modal-settings .modal-settings-content .form .form-inputs div {
             margin: 0;
             padding: 0;
-            min-height: auto !important;
-            height: auto !important;
-            max-height: auto !important;
-            min-width: auto !important;
-            width: auto !important;
-            max-width: auto !important;
+            min-height: 90% !important;
+            height: 90% !important;
+            max-height: 90% !important;
+            min-width: 100% !important;
+            width: 100% !important;
+            max-width: 100% !important;
             display: flex;
             flex-direction: column; }
+            .App .modal-settings .modal-settings-content .form .form-inputs div input, .App .modal-settings .modal-settings-content .form .form-inputs div select {
+              margin-top: 5%;
+              width: 100% !important;
+              min-width: 100%;
+              max-width: 100%;
+              min-height: 8% !important;
+              height: 8% !important;
+              max-height: 8% !important;
+              border: none !important;
+              border-bottom: 1px solid lightgray !important; }
         .App .modal-settings .modal-settings-content .form .form-btns {
           margin: 0;
           padding: 0;
@@ -426,12 +448,12 @@
     .App .modal-add .modal-add-select {
       margin: 0;
       padding: 0;
-      min-height: 10% !important;
-      height: 10% !important;
-      max-height: 10% !important;
-      min-width: 20% !important;
-      width: 20% !important;
-      max-width: 20% !important;
+      min-height: 5% !important;
+      height: 5% !important;
+      max-height: 5% !important;
+      min-width: 10% !important;
+      width: 10% !important;
+      max-width: 10% !important;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -474,6 +496,8 @@
           flex-direction: column;
           justify-content: center;
           align-items: center; }
+          .App .modal-add .modal-add-content .form .form-title h4 {
+            text-transform: uppercase; }
         .App .modal-add .modal-add-content .form .form-inputs {
           margin: 0;
           padding: 0;
@@ -487,17 +511,37 @@
           flex-direction: column;
           justify-content: center;
           align-items: center; }
+          .App .modal-add .modal-add-content .form .form-inputs input {
+            margin-top: 5%;
+            width: 100% !important;
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 8% !important;
+            height: 8% !important;
+            max-height: 8% !important;
+            border: none !important;
+            border-bottom: 1px solid lightgray !important; }
           .App .modal-add .modal-add-content .form .form-inputs div {
             margin: 0;
             padding: 0;
-            min-height: auto !important;
-            height: auto !important;
-            max-height: auto !important;
-            min-width: auto !important;
-            width: auto !important;
-            max-width: auto !important;
+            min-height: 90% !important;
+            height: 90% !important;
+            max-height: 90% !important;
+            min-width: 100% !important;
+            width: 100% !important;
+            max-width: 100% !important;
             display: flex;
             flex-direction: column; }
+            .App .modal-add .modal-add-content .form .form-inputs div input, .App .modal-add .modal-add-content .form .form-inputs div select {
+              margin-top: 5%;
+              width: 100% !important;
+              min-width: 100%;
+              max-width: 100%;
+              min-height: 8% !important;
+              height: 8% !important;
+              max-height: 8% !important;
+              border: none !important;
+              border-bottom: 1px solid lightgray !important; }
         .App .modal-add .modal-add-content .form .form-btns {
           margin: 0;
           padding: 0;

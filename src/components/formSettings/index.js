@@ -20,6 +20,14 @@ export default class FormSettings extends Component {
         });
     }
 
+    generateCategoryInputs() {
+        let inputs = [];
+        this.props.categories.forEach((category) => {
+            inputs.push(<option key={category.id} value={category.id}>{category.libelle}</option>)
+        });
+        return inputs;
+    }
+
     render() {
         return (
             <div className="form">
@@ -35,8 +43,13 @@ export default class FormSettings extends Component {
                         <div>
                             <input type="text" name="libelle" value={this.state.entity.libelle} onChange={(e) => this.handleChange(e)}/>
                             <input type="text" name="date" value={this.state.entity.date} onChange={(e) => this.handleChange(e)}/>
-                            <input type="text" name="type" value={this.state.entity.type} onChange={(e) => this.handleChange(e)}/>
-                            <input type="text" name="category" value={this.state.entity.category} onChange={(e) => this.handleChange(e)}/>
+                            <select id="type" name="type" value={this.state.entity.type} onChange={(e) => this.handleChange(e)}>
+                                <option value="debit">Debit</option>
+                                <option value="credit">Credit</option>
+                            </select>
+                            <select id="category" name="category" value={this.state.entity.category} onChange={(e) => this.handleChange(e)}>
+                                {this.generateCategoryInputs()}
+                            </select>
                             <input type="text" name="sum" value={this.state.entity.sum} onChange={(e) => this.handleChange(e)}/>
                         </div>
                     )}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 // import './form-add.css';
-import {countAllCategories, countAllOperations} from "../../model/helpers";
 
 export default class FormAdd extends Component {
     state = {
@@ -8,6 +7,15 @@ export default class FormAdd extends Component {
     };
 
     componentWillMount() {
+        if(this.props.type === "operation"){
+            if(this.state.entity.type === null || this.state.entity.type === undefined){
+                this.setState({
+                    entity: {
+                        type: "debit"
+                    }
+                });
+            }
+        }
     }
 
     handleChange(e) {
@@ -22,6 +30,14 @@ export default class FormAdd extends Component {
         });
     }
 
+    generateCategoryInputs() {
+        let inputs = [];
+        this.props.entities.categories.forEach((category) => {
+            inputs.push(<option key={category.id} value={category.id}>{category.libelle}</option>)
+        });
+        return inputs;
+    }
+
     render() {
         return (
             <div className="form">
@@ -31,20 +47,20 @@ export default class FormAdd extends Component {
                 </div>
                 <div className="form-inputs">
                     {this.props.type === "category" && (
-                        <input type="text" name="libelle" value={this.state.entity.libelle} onChange={(e) => this.handleChange(e)}/>
+                        <input placeholder="Libelle" type="text" name="libelle" value={this.state.entity.libelle} onChange={(e) => this.handleChange(e)}/>
                     )}
                     {this.props.type === "operation" && (
                         <div>
-                            <label>Libelle</label>
-                            <input type="text" name="libelle" value={this.state.entity.libelle} onChange={(e) => this.handleChange(e)}/>
-                            <label>Date</label>
-                            <input type="text" name="date" value={this.state.entity.date} onChange={(e) => this.handleChange(e)}/>
-                            <label>Type</label>
-                            <input type="text" name="type" value={this.state.entity.type} onChange={(e) => this.handleChange(e)}/>
-                            <label>Category</label>
-                            <input type="text" name="category" value={this.state.entity.category} onChange={(e) => this.handleChange(e)}/>
-                            <label>Sum</label>
-                            <input type="text" name="sum" value={this.state.entity.sum} onChange={(e) => this.handleChange(e)}/>
+                            <input placeholder="Libelle" type="text" name="libelle" value={this.state.entity.libelle} onChange={(e) => this.handleChange(e)}/>
+                            <input placeholder="Date" type="text" name="date" value={this.state.entity.date} onChange={(e) => this.handleChange(e)}/>
+                            <select id="type" name="type" value={this.state.entity.type} onChange={(e) => this.handleChange(e)}>
+                                <option value="debit">Debit</option>
+                                <option value="credit">Credit</option>
+                            </select>
+                            <select id="category" name="category" value={this.state.entity.category} onChange={(e) => this.handleChange(e)}>
+                                {this.generateCategoryInputs()}
+                            </select>
+                            <input placeholder="Sum" type="text" name="sum" value={this.state.entity.sum} onChange={(e) => this.handleChange(e)}/>
                         </div>
                     )}
                 </div>

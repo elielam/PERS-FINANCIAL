@@ -26,10 +26,10 @@ export default class ModalAdd extends Component {
             <div className="modal-add">
                 {this.state.type === "" ? (
                     <div className="modal-add-select">
-                        <select style={{width: "50%", height: "50%"}} name="type" onChange={(e) => this.handleChange(e)} defaultValue={this.state.type}>
+                        <select style={{width: "100%", height: "100%"}} name="type" onChange={(e) => this.handleChange(e)} defaultValue={this.state.type}>
                             <option key={0} value={""}/>
-                            <option key={1} value={"operation"}>Operation</option>
-                            <option key={2} value={"category"}>Category</option>
+                            <option key={1} value={"operation"}>OPERATION</option>
+                            <option key={2} value={"category"}>CATEGORY</option>
                         </select>
                     </div>
                 ) : (

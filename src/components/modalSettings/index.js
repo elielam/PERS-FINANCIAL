@@ -8,6 +8,7 @@ export default class ModalSettings extends Component {
             <div className="modal-settings">
                 <div className="modal-settings-content">
                     <FormSettings
+                        categories={this.props.categories}
                         settings={this.props.settings}
                         handleSaveSettings={this.props.handleSaveSettings}
                         handleCloseSettings={this.props.handleCloseSettings}

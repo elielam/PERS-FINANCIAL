@@ -253,6 +253,7 @@ class App extends Component {
 
                 { this.state.settings.show && (
                     <ModalSettings
+                        categories={this.state.categories}
                         settings={this.state.settings}
                         handleSaveSettings={this.handleSaveSettings.bind(this)}
                         handleCloseSettings={this.handleCloseSettings.bind(this)}
