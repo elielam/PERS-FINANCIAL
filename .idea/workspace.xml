@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c8dfab3f-4433-4e98-bf8f-73d7bec45ccc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/formAdd/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formAdd/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/formSettings/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formSettings/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modalAdd/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modalAdd/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modalSettings/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modalSettings/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/modalSettings/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -53,8 +46,8 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="251" column="18" lean-forward="true" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
+            <state relative-caret-position="4131">
+              <caret line="251" column="18" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -65,7 +58,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/modalAdd/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="527">
               <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -90,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/formSettings/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+              <caret line="30" selection-start-line="30" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -98,7 +91,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/formAdd/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="595">
               <caret line="35" column="49" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="49" />
             </state>
           </provider>
@@ -107,7 +100,7 @@
       <file leaf-file-name="App.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-192">
+            <state relative-caret-position="9690">
               <caret line="570" column="39" selection-start-line="570" selection-start-column="39" selection-end-line="570" selection-end-column="39" />
             </state>
           </provider>
@@ -292,16 +285,18 @@
       <workItem from="1530821844609" duration="1428000" />
       <workItem from="1530824535922" duration="1728000" />
       <workItem from="1530897831015" duration="9302000" />
-      <workItem from="1531057158513" duration="4064000" />
+      <workItem from="1531057158513" duration="5003000" />
+      <workItem from="1531077622602" duration="37000" />
+      <workItem from="1531146040918" duration="599000" />
+      <workItem from="1531165685464" duration="326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57853000" />
+    <option name="totallyTimeSpent" value="59754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13645943" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -683,7 +678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/modalAdd/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="527">
           <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -693,7 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
+        <state relative-caret-position="9690">
           <caret line="570" column="39" selection-start-line="570" selection-start-column="39" selection-end-line="570" selection-end-column="39" />
         </state>
       </provider>
@@ -701,14 +696,14 @@
     <entry file="file://$PROJECT_DIR$/src/components/modalSettings/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="251" column="18" lean-forward="true" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
+        <state relative-caret-position="4131">
+          <caret line="251" column="18" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -717,7 +712,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/formAdd/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="595">
           <caret line="35" column="49" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="49" />
         </state>
       </provider>
@@ -725,7 +720,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/formSettings/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <caret line="30" selection-start-line="30" selection-end-line="31" />
         </state>
       </provider>
     </entry>
